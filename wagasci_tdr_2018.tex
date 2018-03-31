@@ -1,0 +1,177 @@
+\documentclass[11pt, oneside]{article}   	% use "amsart" instead of "article" for AMSLaTeX format
+\usepackage{geometry}                		% See geometry.pdf to learn the layout options. There are lots.
+\geometry{letterpaper}                   		% ... or a4paper or a5paper or ... 
+%\geometry{landscape}                		% Activate for rotated page geometry
+%\usepackage[parfill]{parskip}    		% Activate to begin paragraphs with an empty line rather than an indent
+\usepackage[dvipdfmx]{graphicx}				% Use pdf, png, jpg, or eps§ with pdflatex; use eps in DVI mode
+% TeX will automatically convert eps --> pdf in pdflatex
+\usepackage[blocks, affil-it]{authblk}
+\usepackage{subcaption}
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{color}
+\usepackage{lineno}
+\usepackage{comment}
+\linenumbers
+
+\newcommand{\insertgraph}[4]{
+	\begin{figure}[hbtp]
+		\centering		\includegraphics*[width=#1\textwidth]{fig/#2}
+		\caption{#3}
+		\label{#4}
+	\end{figure}
+	}
+	
+\newcommand{\inserttwographs}[6]{
+	\begin{figure}[hbtp]
+	\centering
+	\includegraphics*[width=#1\textwidth]{fig/#2}
+	\hfill
+	\includegraphics*[width=#3\textwidth]{fig/#4}
+	\caption{#5}
+	\label{#6}
+	\end{figure}
+}
+	
+\newcommand{\insertthreegraphs}[8]{
+	\begin{figure}[hbtp]
+	\centering
+	\includegraphics*[width=#1\textwidth]{fig/#2}
+	\hfill
+	\includegraphics*[width=#3\textwidth]{fig/#4}
+	\hfill
+	\includegraphics*[width=#5\textwidth]{fig/#6}
+	\caption{#7}
+	\label{#8}
+	\end{figure}
+}
+
+\title{Technical Design Report (TDR):\\
+Study of neutrino-nucleus interaction at around 1 GeV using cuboid lattice neutrino detector, WAGASCI, muon range detectors and magnetized spectrometer, Baby-MIND, at J-PARC neutrino monitor hall\\
+(P69, WAGASCI/Baby-MIND)}
+
+\author{Authors will be added.}
+
+\begin{comment}
+
+\author{A.\,Bonnemaison}
+\author{R.\,Cornat}
+\author{L.\,Domine}
+\author{O.\,Drapier}
+\author{O.\,Ferreira}
+\author{F.\,Gastaldi}
+\author{M.\,Gonin}
+\author{J.\,Imber}
+\author{M.\,Licciardi}
+\author{F.\,Magniette}
+\author{T.\,Mueller}
+\author{L.\,Vignoli}
+\author{O.\,Volcy}
+
+\affil{Ecole Polytechnique, IN2P3-CNRS, Laboratoire Leprince-Ringuet, Palaiseau, France }
+
+
+\author{S.\,Cao}
+\author{T.\,Kobayashi}
+
+\affil{High Energy Accelerator Research Organization (KEK), Tsukuba, Ibaraki, Japan}
+
+
+\author{M.\,Khabibullin}
+\author{A.\,Khotjantsev}
+\author{A.\,Kostin}
+\author{Y.\,Kudenko}
+\author{A.\,Mefodiev}
+\author{O.\,Mineev}
+\author{S.\,Suvorov}
+\author{N.\,Yershov}
+
+\affil{Institute for Nuclear Research of the Russian Academy of Sciences, Moscow, Russia}
+
+
+\author{B.\,Quilain}
+
+\affil{Kavli Institute for the Physics and Mathematics of the Universe (WPI), The University of Tokyo Institutes for Advanced Study, University of Tokyo, Kashiwa, Chiba, Japan}
+
+
+\author{T.\,Hayashino}
+\author{A.\,Hiramoto}
+\author{A.K.\,Ichikawa}
+\author{K.\,Nakamura}
+\author{T.\,Nakaya}
+\author{K\,Yasutome}
+\author{K.\,Yoshida}
+
+\affil{Kyoto University, Department of Physics, Kyoto, Japan}
+
+
+\author{Y.\,Azuma}
+\author{J.\,Harada}
+\author{T.\,Inoue}
+\author{K.\,Kin}
+\author{N.\,Kukita}
+\author{S.\,Tanaka}
+\author{Y.\,Seiya}
+\author{K.\,Wakamatsu}
+\author{K.\,Yamamoto}
+
+\affil{Osaka City University, Department of Physics, Osaka, Japan}
+
+
+\author{A.\,Blondel}
+\author{F.\,Cadoux}
+%\author{Y.\,Karadzhov}
+\author{Y.\,Favere}
+\author{E.\,Noah}
+\author{L.\,Nicola}
+\author{S.\,Parsa}
+%\author{M.\,Rayner}
+
+\affil{University of Geneva, Section de Physique, DPNC, Geneva, Switzerland}
+
+
+\author{N.\,Chikuma}
+\author{F.\,Hosomi}
+\author{T.\,Koga}
+\author{R.\,Tamura}
+\author{M.\,Yokoyama}
+
+\affil{University of Tokyo, Department of Physics, Tokyo, Japan}
+
+
+\author{Y.\,Hayato}
+
+\affil{University of Tokyo, Institute for Cosmic Ray Research, Kamioka Observatory, Kamioka, Japan}
+
+
+\author{Y.\,Asada}
+\author{K.\,Matsushita}
+\author{A.\,Minamino}
+\author{K.\,Okamoto}
+\author{D.\,Yamaguchi}
+
+\affil{Yokohama National University, Faculty of Engineering, Yokohama, Japan}
+
+\end{comment}
+
+%\date{}							% Activate to display a given date or no date
+
+\begin{document}
+\maketitle
+\input{abstract.tex}
+%\newpage
+\tableofcontents
+\newpage
+%\section{}
+%\subsection{}
+\input{introduction.tex}
+\input{physics.tex}
+\input{components.tex}
+\input{physics_goals.tex}
+\input{summary.tex}
+\input{requests.tex}
+
+\bibliographystyle{plain}
+\bibliography{wagasci}
+
+\end{document}  
